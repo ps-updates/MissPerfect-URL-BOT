@@ -1,7 +1,7 @@
+pyrogram==2.0.106
 numpy
 yt-dlp
 Pillow
-aiohttp
 hachoir
 olefile
 requests
@@ -10,9 +10,8 @@ aiofiles
 dnspython
 motor[srv]
 beautifulsoup4
-pyrogram
-Flask==1.1.2
+humanize
+Flask==2.2.2
 gunicorn==20.1.0
-Jinja2==3.0.3
-werkzeug==2.0.2
-itsdangerous==2.0.1
+aiohttp
+pymongo[srv]==3.12.3
