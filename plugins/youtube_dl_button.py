@@ -73,7 +73,7 @@ async def youtube_dl_call_back(bot, update):
     await bot.edit_message_text(
     text=Translation.DOWNLOAD_START,
     chat_id=update.message.chat.id,
-    message_id=update.message.message_id)
+    message_id=update.id)
     description = Translation.CUSTOM_CAPTION_UL_FILE
     if "fulltitle" in response_json:
         description = response_json["fulltitle"][0:1021]
@@ -155,7 +155,7 @@ async def youtube_dl_call_back(bot, update):
             await bot.edit_message_text(
             text=Translation.UPLOAD_START,
             chat_id=update.message.chat.id,
-            message_id=update.message.message_id)
+            message_id=update.id)
             try:
                 start_time = time.time()
                 if tg_send_type == "audio":
@@ -189,7 +189,7 @@ async def youtube_dl_call_back(bot, update):
                     duration=duration,
                     length=width,
                     thumb=thumb_image_path,
-                    reply_to_message_id=update.message.reply_to_message.message_id,
+                    reply_to_message_id=update.id,
                     progress=progress_for_pyrogram,
                     progress_args=(Translation.UPLOAD_START, update.message, start_time))
                 elif tg_send_type == "video":
