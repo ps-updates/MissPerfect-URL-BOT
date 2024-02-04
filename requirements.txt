@@ -8,7 +8,7 @@ requests
 tgcrypto
 aiofiles
 dnspython
-motor[srv]
+motor
 beautifulsoup4
 humanize
 Flask==2.2.2
